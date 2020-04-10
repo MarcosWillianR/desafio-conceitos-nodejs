@@ -66,8 +66,6 @@ app.delete("/repositories/:id", (req, res) => {
 app.post("/repositories/:id/like", (req, res) => {
   const { repositoryIndex } = req;
 
-  const { likes } = repositories[repositoryIndex];
-
   repositories[repositoryIndex].likes += 1;
   
   return res.json(repositories[repositoryIndex]);
